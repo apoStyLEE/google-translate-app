@@ -2,8 +2,8 @@ var menubar = require('menubar')
 var app = require("./js/app.js");
 
 var opt = {
-  index: "https://translate.google.com",
-  width: 800,
+  index: "https://translate.google.com/m/translate",
+  width: 600,
   height: 600,
   windowPosition: "topRight"
 }
