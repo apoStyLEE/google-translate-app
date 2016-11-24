@@ -3,8 +3,8 @@ var app = require("./js/app.js");
 
 var opt = {
   index: "https://translate.google.com/m/translate",
-  width: 600,
-  height: 600,
+  width: 800,
+  height: 700,
   windowPosition: "topRight"
 }
 
