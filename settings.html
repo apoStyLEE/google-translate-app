@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="js/settings.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Settings</h1>
+
+        <form>
+            <div class="form-group">
+                <label for="source">Source Language</label>
+                <select class="form-control" id="source" name="source">
+                    <option value="auto">Auto</option>
+                    <option value="en">English</option>
+                    <option value="tr">Turkish</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="destination">Destination Language</label>
+                <select class="form-control" id="destination" name="destination">
+                    <option value="en">English</option>
+                    <option value="tr">Turkish</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <a href="#" id="cancel">cancel</a>
+        </form>
+    </div>
+</body>
+
+</html>
