@@ -19,14 +19,14 @@ var app = {
         var helpers = app.helpers
         var mb = this.menuBar;
         var clipboardSelectionText = clipboard.readText('selection')
-        var url = opt.index + "/#" + helpers.getSetting("source") + "/" + helpers.getSetting("destination") + "/" + clipboardSelectionText
+        var url = opt.index + "#" + helpers.getSetting("source") + "/" + helpers.getSetting("destination") + "/" + clipboardSelectionText
         app.appWindow(url)
     },
     insertCustomCss: function () {
-        var webContents = this.menuBar.window.webContents;
-        webContents.on('did-finish-load', function () {
-            webContents.insertCSS('.e_md #gt-ft-res, #gt-ft{ display:none!important }')
-        });
+        // var webContents = this.menuBar.window.webContents;
+        // webContents.on('did-finish-load', function () {
+        //     webContents.insertCSS('.e_md #gt-ft-res, #gt-ft{ display:none!important }')
+        // });
     },
     events: {
         menuItemClick: function (menuItem, browserWindow, event) {
@@ -73,6 +73,7 @@ var app = {
         var mb = this.menuBar;
         mb.showWindow()
         mb.window.loadUrl(url)
+        console.log(url)
         this.insertCustomCss()
     }
 }
