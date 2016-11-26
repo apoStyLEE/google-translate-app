@@ -6,6 +6,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="js/settings.js"></script>
+    <style>
+        .form-control-inline{
+            width: 200px;
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,6 +33,16 @@
                     <option value="en">English</option>
                     <option value="tr">Turkish</option>
                 </select>
+            </div>
+
+            <div class="form-group">
+                <label for="destination" class="show">Window Width</label>
+                <input type="number" class="form-control form-control-inline" name="window-width" placeholder="default: 800px"> px
+            </div>
+
+            <div class="form-group">
+                <label for="destination" class="show">Window Height</label>
+                <input type="number" class="form-control form-control-inline" name="window-height" placeholder="default: 700px"> px
             </div>
 
             <button type="submit" class="btn btn-primary">Save Changes</button>

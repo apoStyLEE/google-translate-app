@@ -30,11 +30,10 @@ var app = {
     },
     events: {
         menuItemClick: function (menuItem, browserWindow, event) {
-            var that = this
             if (menuItem.id == "settings") {
                 app.helpers.loadStaticFile(menuItem.loadFileName)
             } else if (menuItem.id == "quit") {
-                that.menuBar.app.quit()
+                app.menuBar.app.quit()
             }
         }
     },

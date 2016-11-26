@@ -1,10 +1,12 @@
 var menubar = require('menubar')
-var app = require("./js/app.js");
+var app = require("./js/app");
+var Config = require('electron-config');
+var config = new Config();
 
 var opt = {
   index: "https://translate.google.com/m/translate",
-  width: 800,
-  height: 700,
+  width: config.get("window-width") || 800,
+  height: config.get("window-height") || 700,
   windowPosition: "topRight"
 }
 

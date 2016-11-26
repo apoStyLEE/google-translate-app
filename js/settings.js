@@ -6,11 +6,20 @@ var browserWindow = require('electron').remote.getCurrentWindow()
 $(document).ready(function () {
 
     $("form").on("submit", function () {
-        var settingDatas = $(this).serializeArray();
-        for (var i = 0; i < settingDatas.length; i++) {
-            var settingData = settingDatas[i];
-            config.set(settingData.name, settingData.value);
-        }
+
+        var elems = $(this).find("input, select");
+
+        elems.each(function(i, elem){
+            var elemName = elem.name
+            var elemVal = elem.value
+
+            if (elem.type == "number"){
+                config.set(elemName, parseInt(elemVal));
+            }
+            else{
+                config.set(elemName, elemVal);
+            }
+        })
 
         browserWindow.hide();
         browserWindow.webContents.goBack()
@@ -31,3 +40,7 @@ function loadConfigs() {
         $("[name='" + key + "']").val(value);
     }
 }
+
+function isInt(n) { 
+    return parseInt(n) === n 
+};

@@ -14,7 +14,7 @@
   },
   "main": "main.js",
   "scripts": {
-    "build": "electron-packager . Google Translate --platform=darwin --arch=x64 --version=0.36.0 --icon=Icon.icns",
+    "build": "electron-packager . 'Google Translate' --platform=darwin --arch=x64 --version=0.36.0 --icon=Icon.icns",
     "start": "electron ."
   }
 }
